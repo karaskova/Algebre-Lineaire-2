@@ -39,7 +39,7 @@ On dit que la forme bilinéaire est \emph{non dégénérée} si la condition sui
   Soit $V = K^n$, l'application  
   \begin{displaymath}
     \begin{array}{rcl}
-      \pscal{\,}\colon    \,  V\times V& \longrightarrow &V \\
+      \pscal{\,}\colon    \,  V\times V& \longrightarrow &K \\
                               (u,v)   & \longmapsto & \sum_{i=1}^n u_i v_i
     \end{array}  
   \end{displaymath}
@@ -132,7 +132,25 @@ qui est égale a $1$. Alors $f(v,b_i) \neq 0$.
 Si $f$ est non dégénérée, alors $x^T A_B^f \neq 0$ pour tout $x \in K^n$ tel que $x \neq 0$. Ceci implique que les lignes de $A_B^f$ sont linéairement indépendantes. Alors $\rank(A_B^f) = n$. 
 \end{proof}
 
+\subsection*{Exercices} 
 
+\begin{enumerate}
+
+\item 	Soit $V\subseteq\R_n[x]$ l'espace euclidien des polyn\^omes de degr\'e au plus $n$. Si $f,g \in V$ on pose 
+	\begin{displaymath}
+		\pscal{f,g} = \int_0^{1} f(x)g(x) \, \mathrm dx.
+	\end{displaymath}	
+	D\'ecrire la matrice $A^f_B$ pour $B=\{1, x, \ldots, x^n\}$.
+\item 	On d\'efinit $f: \R^3\times \R^3\to \R$ par	
+	$$f\left(\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}, \begin{pmatrix} y_1\\ y_2 \\ y_3 \end{pmatrix} \right) =2x_1y_1-x_2y_3-x_3y_2+5x_1y_2+5x_2y_1-8x_3y_3.$$
+	Soient $$B = \left\{ \begin{pmatrix} 1 \\ 0 \\ 0\end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \right\} 
+		\text{ et } B' = \left\{ b_1' = \begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}, b_2' = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}, b_3' = \begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix} \right\}.$$
+	\begin{itemize}
+		\item[a)] Trouver la matrice $A^f_B$ par rapport \`a la base canonique $B$ de~$\R^3$.
+		\item[b)] Trouver la matrice de changement de base $P_{B'B}$.
+		\item[c)] Trouver la matrice $A^f_{B'}$ par rapport \`a la base $B'$ de~$\R^3$.
+	\end{itemize}
+\end{enumerate}
 
 
 
@@ -290,26 +308,6 @@ Alors $\dim(V_1^\perp) < \dim(V)$, et par induction, $V_1^\perp$ possède une ba
     \end{pmatrix} \in \Z_2^4. 
   \end{displaymath}
 Est-ce que $\spa\{v_1,v_2,v_3\}$ possède une base orthogonale par rapport à la forme bilinéaire symétrique standard de l'exemple~\ref{ex:1}? 
-
-\item En considérant le forme bilinéaire symétrique standard de l'exemple~\ref{ex:1}, trouver une base orthogonale du sous-espace de $\Z_3^4$ engendré par 
-  \begin{displaymath}
-    v_1 =
-    \begin{pmatrix}
-      1\\1\\1\\0
-    \end{pmatrix}, 
- v_2 =
-    \begin{pmatrix}
-      0\\1\\1\\1
-    \end{pmatrix}, 
-\text{ et }
- v_3 =
-    \begin{pmatrix}
-      1\\0\\1\\1
-    \end{pmatrix} \in \Z_3^4. 
-  \end{displaymath}
-
-
-
 \end{enumerate}
 
 \section{Matrices congruentes} 
@@ -532,6 +530,22 @@ Alors $B' = \{v_1,v_2,-2v_1 -(4/3) v_2 + v_3\}$ est une base orthogonale de $V$.
     \end{pmatrix} \in \Z_2^{3\times 3} 
   \end{displaymath}
   est congruente à une matrice diagonale? \emph{Renseignement: voir l'exercice~\ref{item:1}. de la section~\ref{sec:orthogonalite}.}  
+\item En considérant le forme bilinéaire symétrique standard de l'exemple~\ref{ex:1}, trouver une base orthogonale du sous-espace de $\Z_3^4$ engendré par 
+  \begin{displaymath}
+    v_1 =
+    \begin{pmatrix}
+      1\\1\\1\\0
+    \end{pmatrix}, 
+ v_2 =
+    \begin{pmatrix}
+      0\\1\\1\\1
+    \end{pmatrix}, 
+\text{ et }
+ v_3 =
+    \begin{pmatrix}
+      1\\0\\1\\1
+    \end{pmatrix} \in \Z_3^4. 
+  \end{displaymath}
 \item Soit $V$ un espace vectoriel  sur un corps $K$ de dimension finie muni d'une forme bilinéaire symétrique $\pscal{.}$. Soit $B = \{v_1,\dots,v_n\}$ une base de $V$. Montrer que $A_B^{\pscal{.}} \in K^{n \times n}$ est congruente à une matrice diagonale si  et seulement si $V$ possède une base orthogonale. 
 
 \item Soit $K$ un corps de caractéristique $2$ et soit $V$ un espace vectoriel sur $K$ de dimension finie muni d'une forme bilinéaire symétrique. Soit 
